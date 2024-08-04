@@ -1,0 +1,56 @@
+.h-wrapper{
+    background: var(--black);
+    color: white;
+}
+
+.h-container{
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--secondary);
+}
+
+.h-menu{
+    gap: 2rem;
+}
+
+.h-menu>*:hover{
+    cursor: pointer;
+}
+
+.h-menu a{
+    color: #e1e1e1;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+.h-menu a:focus,
+.h-menu a:hover{
+    color: #fff;
+}
+
+.h-menu a:focus::after,
+.h-menu a:hover:after
+{
+    width: 100%;
+    left: 0%;
+}
+
+.h-menu a:after{
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
